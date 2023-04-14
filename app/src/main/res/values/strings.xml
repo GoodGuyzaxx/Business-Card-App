@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Busniess Card</string>
+    <string name="full_name">Dewantara</string>
+    <string name="title">Undgrauted Student</string>
+    <string name="phone">+62 8220000000</string>
+    <string name="web">goodguy.my.id</string>
+    <string name="email">Dumb@mail.com</string>
+    <string name="unit_test">Unit Testing</string>
+</resources>
