@@ -2,13 +2,17 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
+//
+//ext {
+//    defaultApplicationId = compose_ui_version
+//}
 
 android {
-    namespace 'id.zaxx.busniesscard'
+    namespace 'id.zaxx.businesscard'
     compileSdk 33
 
     defaultConfig {
-        applicationId "id.zaxx.busniesscard"
+        applicationId 'id.zaxx.businesscard'
         minSdk 24
         targetSdk 33
         versionCode 1

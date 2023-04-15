@@ -1,4 +1,4 @@
-package id.zaxx.busniesscard.ui.theme
+package id.zaxx.businesscard.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

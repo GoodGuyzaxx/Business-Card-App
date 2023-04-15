@@ -1,4 +1,4 @@
-package id.zaxx.busniesscard.ui.theme
+package id.zaxx.businesscard.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

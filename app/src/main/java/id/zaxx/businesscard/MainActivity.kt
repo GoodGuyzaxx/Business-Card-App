@@ -1,4 +1,4 @@
-package id.zaxx.busniesscard
+package id.zaxx.businesscard
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,21 +12,13 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AddCircle
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Done
 import androidx.compose.material.icons.filled.Email
-import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Phone
-import androidx.compose.material.icons.materialIcon
-import androidx.compose.material.icons.outlined.Place
-import androidx.compose.material.icons.rounded.Done
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -35,21 +27,19 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import id.zaxx.busniesscard.ui.theme.*
-import id.zaxx.busniesscard.ui.theme.BusniessCardTheme
-import java.util.Vector
+import id.zaxx.businesscard.ui.theme.BusinessCardTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            BusniessCardTheme {
+            BusinessCardTheme() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    BusniessCardMainApp()
+                    BusinessCardMainApp()
                 }
             }
         }
@@ -57,8 +47,8 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun BusniessCardMainApp(){
-    val image = painterResource(id = R.drawable.android_logo)
+fun BusinessCardMainApp(){
+    val image = painterResource(id =R.drawable.android_logo )
     Column(horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
         modifier = Modifier
@@ -73,20 +63,20 @@ fun BusniessCardMainApp(){
                 .width(120.dp)
                 .height(120.dp)
             )
-            BusniessCardTitle(name = stringResource(id = R.string.full_name), title = stringResource(R.string.title) )
+            BusinessCardTitle(name = stringResource(id = R.string.full_name), title = stringResource(R.string.title) )
         }
     }
         Column(verticalArrangement = Arrangement.Bottom,modifier = Modifier
             .padding(bottom = 50.dp)
             .fillMaxSize()) {
-            BusniessCardInformation(info = stringResource(id = R.string.phone), icon = Icons.Default.Phone)
-            BusniessCardInformation(info = stringResource(id = R.string.web), icon = Icons.Filled.AddCircle)
-            BusniessCardInformation(info = stringResource(id = R.string.email), icon = Icons.Default.Email)
+            BusinessCardInformation(info = stringResource(id = R.string.phone), icon = Icons.Default.Phone)
+            BusinessCardInformation(info = stringResource(id = R.string.web), icon = Icons.Filled.AddCircle)
+            BusinessCardInformation(info = stringResource(id = R.string.email), icon = Icons.Default.Email)
         }
 }
 
 @Composable
-fun BusniessCardTitle(name: String,title:String){
+fun BusinessCardTitle(name: String,title:String){
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Text(text =name, fontSize = 32.sp, fontFamily = FontFamily.SansSerif, color = Color.White)
         Text(text = title, fontWeight = FontWeight.Bold, color = colorResource(id = R.color.faded_poster) , modifier = Modifier.padding(top = 5.dp))
@@ -94,7 +84,7 @@ fun BusniessCardTitle(name: String,title:String){
 }
 
 @Composable
-fun BusniessCardInformation(info:String,icon:ImageVector){
+fun BusinessCardInformation(info:String,icon:ImageVector){
     Row(modifier = Modifier
         .fillMaxWidth()
         .padding(start = 80.dp, top = 15.dp, bottom = 5.dp)) {
@@ -115,8 +105,8 @@ fun BusniessCardInformation(info:String,icon:ImageVector){
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    BusniessCardTheme {
-        BusniessCardMainApp()
+    BusinessCardTheme {
+        BusinessCardMainApp()
 //        BusniessCardTitle(name = stringResource(id = R.string.full_name), title = stringResource(id = R.string.title))
     }
 }

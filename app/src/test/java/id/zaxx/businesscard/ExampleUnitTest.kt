@@ -1,4 +1,4 @@
-package id.zaxx.busniesscard
+package id.zaxx.businesscard
 
 import org.junit.Test
 
